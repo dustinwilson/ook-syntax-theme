@@ -1,0 +1,307 @@
+@import "syntax-variables";
+
+atom-text-editor {
+  background-color: @syntax-background-color;
+  color: @syntax-text-color;
+
+  .cursor {
+    border-color: @syntax-cursor-color;
+  }
+
+  .wrap-guide {
+    background-color: @syntax-wrap-guide-color;
+  }
+
+  .indent-guide {
+    color: @syntax-indent-guide-color;
+  }
+
+  .invisible-character {
+    color: @syntax-invisible-character-color;
+  }
+
+  .selection .region {
+    background-color: @syntax-selection-color;
+  }
+
+  .search-results .region {
+    .syntax--marker {
+      background-color: transparent;
+      border: @syntax-result-marker-color;
+    }
+
+    .syntax--marker.current-result {
+      border: @syntax-result-marker-color-selected;
+    }
+  }
+
+  .gutter {
+    background-color: @syntax-gutter-background-color;
+    color: @syntax-gutter-text-color;
+
+    .line-number {
+      &.cursor-line {
+        background-color: @syntax-gutter-background-color-selected;
+        color: @syntax-gutter-text-color-selected;
+      }
+
+      &.cursor-line-no-selection {
+        color: @syntax-gutter-text-color-selected;
+      }
+    }
+  }
+}
+
+
+// Syntax styles
+.syntax--comment {
+    color: @base16-color-base03;
+}
+
+.syntax--constant {
+    color: @base16-color-base09;
+
+    &.syntax--character {
+        &.syntax--escape {
+            color: @base16-color-base0C;
+        }
+    }
+
+    &.syntax--numeric {
+        color: @base16-color-base09;
+    }
+
+    &.syntax--other {
+        &.syntax--color {
+            color: @base16-color-base0C;
+        }
+
+        &.syntax--symbol {
+            color: @base16-color-base0B;
+        }
+    }
+}
+
+.syntax--entity {
+    &.syntax--name {
+        &.syntax--class, &.syntax--namespace {
+            color: @base16-color-base0A;
+        }
+
+        &.syntax--function {
+            color: @base16-color-base0D;
+        }
+
+        &.syntax--section {
+            color: @base16-color-base0D;
+        }
+
+        &.syntax--tag {
+            color: @base16-color-base08;
+        }
+
+        &.syntax--type {
+            &.syntax--class {
+                color: @base16-color-base0A;
+            }
+        }
+    }
+
+    &.syntax--other {
+        &.syntax--attribute-name {
+            color: @base16-color-base0E;
+
+            &.syntax--syntax--id {
+                color: @base16-color-base0D;
+            }
+        }
+
+        &.syntax--inherited-class {
+            color: @base16-color-base0B;
+        }
+    }
+}
+
+.syntax--invalid.syntax--illegal {
+    color: @base16-color-base00;
+    background-color: @base16-color-base08;
+}
+
+.syntax--keyword {
+    color: @base16-color-base0E;
+
+    &.syntax--arithmetic {
+        color: @base16-color-base05;
+    }
+
+    &.syntax--other {
+        &.syntax--special-method {
+            color: @base16-color-base0D;
+        }
+
+        &.syntax--syntax--unit {
+            color: @base16-color-base09;
+        }
+    }
+}
+
+.syntax--markup {
+    &.syntax--bold {
+        font-weight: bold;
+        color: @base16-color-base0A;
+    }
+
+    &.syntax--changed {
+        color: @base16-color-base0E;
+    }
+
+    &.syntax--deleted {
+        color: @base16-color-base08;
+    }
+
+    &.syntax--heading {
+        color: @base16-color-base0D;
+    }
+
+    &.syntax--inserted {
+        color: @base16-color-base0B;
+    }
+
+    &.syntax--italic {
+        font-style: italic;
+        color: @base16-color-base0E;
+    }
+
+    &.syntax--list {
+        color: @base16-color-base08;
+    }
+
+    &.syntax--quote {
+        color: @base16-color-base09;
+    }
+
+    &.syntax--raw {
+        &.syntax--inline {
+            color: @base16-color-base0B;
+        }
+    }
+}
+
+.syntax--meta {
+    &.syntax--class {
+        color: @base16-color-base07;
+    }
+
+    &.syntax--link {
+        color: @base16-color-base09;
+    }
+
+    &.syntax--require {
+        color: @base16-color-base0D;
+    }
+
+    &.syntax--selector {
+        color: @base16-color-base0E;
+    }
+
+    &.syntax--separator {
+        color: @base16-color-base05;
+        background-color: @base16-color-base02;
+    }
+
+    &.syntax--property-name, .syntax--support.syntax--type.syntax--property-name {
+        color: @base16-color-base0A;
+    }
+}
+
+.syntax--none {
+    color: @base16-color-base05;
+}
+
+/*.syntax--punctuation {
+  &.syntax--definition {
+    &.syntax--array,
+    &.syntax--parameters,
+    &.syntax--variable {
+      color: @base16-color-base05;
+    }
+
+    &.syntax--bold {
+      font-weight: bold;
+      color: @base16-color-base0A;
+    }
+
+    &.syntax--comment {
+      color: @base16-color-base03;
+    }
+
+    &.syntax--entity {
+      color: @base16-color-base0D;
+    }
+
+    &.syntax--italic {
+      font-style: italic;
+      color: @base16-color-base0E;
+    }
+}
+
+  &.syntax--section {
+    &.syntax--embedded {
+      color: @base16-color-base0F;
+    }
+  }
+}*/
+
+.syntax--storage {
+    color: @base16-color-base0E;
+}
+
+.syntax--string {
+    color: @base16-color-base0B;
+
+    &.syntax--other {
+        &.syntax--link {
+            color: @base16-color-base08;
+        }
+    }
+
+    &.syntax--regexp {
+        color: @base16-color-base0C;
+    }
+
+    .syntax--variable {
+        color: @base16-color-base0F;
+    }
+}
+
+.syntax--support {
+    &.syntax--class {
+        color: @base16-color-base0A;
+    }
+
+    &.syntax--type {
+        color: @base16-color-base0C;
+    }
+
+    &.syntax--function {
+        color: @base16-color-base0C;
+
+        &.syntax--any-method {
+            color: @base16-color-base0D;
+        }
+    }
+}
+
+.syntax--variable {
+    color: @base16-color-base08;
+
+    &.syntax--interpolation {
+        color: @base16-color-base0F;
+    }
+
+    &.syntax--parameter {
+        &.syntax--function {
+            color: @base16-color-base05;
+        }
+    }
+}
