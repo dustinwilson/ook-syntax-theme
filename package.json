@@ -1,7 +1,7 @@
 {
   "name": "ook-syntax-theme",
   "theme": "syntax",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A Base16-style theme designed originally for dustinwilson.com and ported",
   "keywords": [
     "syntax",
