@@ -57,6 +57,37 @@ atom-text-editor {
 .syntax--comment {
     color: @base16-color-base03;
     font-style: italic;
+
+    // Documentation styles (jsdoc, phpdoc, etc.)
+    .syntax--constant {
+        color: mix(@base16-color-base03, @base16-color-base09);
+    }
+
+    .syntax--keyword {
+        color: mix(@base16-color-base03, @base16-color-base0E);
+    }
+
+    .syntax--support {
+        &.syntax--class {
+            color: mix(@base16-color-base03, @base16-color-base0A);
+        }
+
+        &.syntax--type {
+            color: mix(@base16-color-base03, @base16-color-base0C);
+        }
+
+        &.syntax--function {
+            color: mix(@base16-color-base03, @base16-color-base0C);
+
+            &.syntax--any-method {
+                color: mix(@base16-color-base03, @base16-color-base0D);
+            }
+        }
+    }
+
+    .syntax--variable {
+        color: mix(@base16-color-base03, @base16-color-base08);
+    }
 }
 
 .syntax--constant {
